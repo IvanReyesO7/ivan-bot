@@ -33,11 +33,11 @@ class WeatherAPI
   def self.get_emoji(string)
     case string
     when "Rain"
-      return "🌧"
+      return ":rain_cloud:"
     when "clear"
-      return "☀️"
+      return ":sunny:"
     when "clouds"
-      return "☁️"
+      return ":cloud:"
     end
   end
 end
