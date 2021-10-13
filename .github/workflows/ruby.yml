@@ -11,7 +11,7 @@ on:
   push:
 
 jobs:
-  test:
+  ivan-bot:
 
     runs-on: ubuntu-latest
     strategy:
@@ -28,13 +28,10 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Install bundler
-      run: |
-        gem install bundler:2.2.26
-
     - name: Install dependencies
       run: |
-        bundle install
+        gem install geocoder
+        
     - name: run script
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
