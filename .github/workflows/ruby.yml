@@ -8,7 +8,8 @@
 name: Ruby
 
 on:
-  push:
+  schedule:
+    - cron: '0 1 0 0 0'
 
 #  schedule:
  #   - cron:  '0 1 * * *'
