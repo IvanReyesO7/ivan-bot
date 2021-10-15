@@ -8,10 +8,8 @@
 name: Ruby
 
 on:
-  push:
-
-#  schedule:
- #   - cron:  '0 1 * * *'
+  schedule:
+  - cron: '0 23 * * *'
 
 jobs:
   ivan-bot:
