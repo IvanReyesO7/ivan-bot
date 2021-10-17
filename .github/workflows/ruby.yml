@@ -27,7 +27,6 @@ jobs:
         gem install geocoder
     - name: run script
       env:
-        CHANNEL_ACCESS_TOKEN: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
-        USER_ID: ${{ secrets.USER_ID }}
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       run: |
         ruby ivan-bot.rb
